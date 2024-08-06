@@ -4,6 +4,10 @@ html {
   overflow-x: hidden;
 }
 
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
 .backgroundColorado {
   width: auto;
   margin: -1%;
@@ -14,25 +18,72 @@ html {
 nav {
   display: flex;
   justify-content: center;
-  background-color: white;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  padding: 20px;
-  border-radius: 25px;
+  margin-bottom: 3rem;
 }
 
-a {
+.topnav-right {
+  float: right;
+}
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  width: 84%;
+  height: 52px;
+  padding: 10px;
+  border-radius: 20px;
+  position: fixed;
+  top: 5;
+  z-index: 5;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  color: black;
-  margin-right: 1rem;
-  margin-left: 1rem;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: larger;
+  font-size: 17px;
 }
 
-a:hover {
-  background-color: gray;
-  border-radius: 25px;
+.topnav-right a:hover:nth-child(even) {
+  border: 3px solid white;
+  border-radius: 15px;
+  background-color: rgb(255, 115, 115);
+}
+
+.topnav-right a:hover:nth-child(odd) {
+  border: 3px solid white;
+  border-radius: 15px;
+  background-color: rgb(255, 154, 71);
+}
+
+header {
+  color: white;
+  max-width: 84%;
+  position: relative;
+  left: 50%;
+  margin-left: 2.5rem;
+  justify-content: center;
+  top: 10rem;
+  background-image: url("/images/stock-photo-brown-wooden-background.png");
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 5px solid #333;
+}
+
+.glow {
+  font-size: 40px;
+  color: #333;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff04d, 0 0 40px #fff04d, 0 0 50px #fff04d, 0 0 60px #fff04d, 0 0 70px #fff04d;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #fff04d, 0 0 40px #fff04d, 0 0 50px #fff04d, 0 0 60px #fff04d, 0 0 70px #fff04d, 0 0 80px #fff04d;
+  }
 }/*# sourceMappingURL=style.css.map */
