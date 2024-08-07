@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background-color: #333;
+    background-color: #fff8f8;
 }
 
 * {
@@ -14,10 +14,10 @@ body {
 
 .backgroundColorado {
     position: absolute;
-    height: 700px;
+    height: 800px;
     left: 50%;
-    top: 46%;
-    width: 85%;
+    top: 55%;
+    width: 100%;
     z-index: -1;
     transform: translate(-50%, -50%);
     border-radius: 5px;
@@ -34,8 +34,9 @@ nav {
 }
 
 .topnav {
+    background-color: #333;
     overflow: hidden;
-    width: 84%;
+    width: 100%;
     height: 52px;
     padding: 10px;
     position: fixed;
@@ -68,7 +69,7 @@ nav {
     transform: translate(-50%, -50%);
     position: absolute;
     left: 50%;
-    top: 45%;
+    top: 40%;
     font-size: 50px;
 }
 
@@ -76,6 +77,7 @@ nav {
     font-size: 40px;
     color: #ffffff;
     text-align: center;
+    font-family: Gray;
     animation: glow 1s ease-in-out infinite alternate;
 }
 
@@ -111,4 +113,9 @@ header {
     transform: translate(-50%, -50%);
     padding: 20px;
     font-size: 50px;
+}
+
+@font-face {
+    font-family: Grey;
+    src: url(/GreyQo-Regular.ttf);
 }
