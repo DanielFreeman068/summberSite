@@ -4,15 +4,23 @@ html {
     overflow-x: hidden;
 }
 
+body {
+    background-color: #333;
+}
+
 * {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .backgroundColorado {
-    width:auto;
-    margin: -1%;
     position: absolute;
+    height: 700px;
+    left: 50%;
+    top: 46%;
+    width: 85%;
     z-index: -1;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
 }
 
 nav {
@@ -26,12 +34,10 @@ nav {
 }
 
 .topnav {
-    background-color: #333;
     overflow: hidden;
     width: 84%;
     height: 52px;
     padding: 10px;
-    border-radius: 20px;
     position: fixed;
     top: 5;
     z-index: 5;
@@ -52,30 +58,23 @@ nav {
     background-color: rgb(255, 115, 115);
 }
 
-.topnav-right a:hover:nth-child(odd) {
+.topnav a:hover:nth-child(odd) {
     border: 3px solid white;
     border-radius: 15px;
     background-color: rgb(255, 154, 71);
 }
 
-header {
-    color: white;
-    max-width: 84%;
-    position: relative;
-    left: 50%;
-    margin-left: 2.5rem;
-    justify-content: center;
-    top: 10rem;
-    background-image: url("/images/stock-photo-brown-wooden-background.png");
-    border-radius: 5px;
+#summerHeader {
     transform: translate(-50%, -50%);
-    padding: 20px;
-    border: 5px solid #333;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    font-size: 50px;
 }
 
 .glow {
     font-size: 40px;
-    color: #333;
+    color: #ffffff;
     text-align: center;
     animation: glow 1s ease-in-out infinite alternate;
 }
@@ -98,4 +97,18 @@ header {
     to {
         text-shadow: 0 0 20px #fff, 0 0 30px #fff04d, 0 0 40px #fff04d, 0 0 50px #fff04d, 0 0 60px #fff04d, 0 0 70px #fff04d, 0 0 80px #fff04d;
     }
+}
+
+header {
+    text-align: center;
+    color: white;
+    position: absolute;
+    width: 1600px;
+    top: 90%;
+    left: 50%;
+    background-image: url("/images/stock-photo-brown-wooden-background.png");
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    font-size: 50px;
 }
