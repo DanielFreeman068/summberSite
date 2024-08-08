@@ -1,3 +1,9 @@
+//font for page
+@font-face {
+    font-family: Grey;
+    src: url(/GreyQo-Regular.ttf);
+}
+
 html {
     margin:0;
     padding:0;
@@ -13,6 +19,7 @@ body {
     box-sizing: border-box;
 }
 
+//van picture styling
 #van {
     position: relative;
     height: 100vh;
@@ -21,6 +28,7 @@ body {
     border-radius: 5px;
 }
 
+//polaroids and arrow placement on top of page
 .polar {
     position: absolute;
     top: 18.4%;
@@ -51,6 +59,8 @@ body {
     rotate: 60deg;
 }
 
+
+//nav styling
 nav {
     display: flex;
     justify-content: center;
@@ -94,6 +104,8 @@ nav {
     background-color: rgb(255, 154, 71);
 }
 
+
+//big summer welcomg styling
 #summerHeader {
     transform: translate(-50%, -50%);
     position: absolute;
@@ -103,23 +115,13 @@ nav {
     z-index: 5;
 }
 
+//blur on van picture
 .bg-image {
-    /* The image used */
-    background-image: url("photographer.jpg");
-
-    /* Add the blur effect */
     filter: blur(8px);
     -webkit-filter: blur(8px);
-
-    /* Full height */
-    height: 100%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
+//glow for top left summer word
 .glow {
     font-size: 40px;
     color: #ffffff;
@@ -148,6 +150,7 @@ nav {
     }
 }
 
+//header styling for start of second part of page
 header {
     border-top: 5px solid rgb(0, 0, 0);
     position: relative;
@@ -161,11 +164,6 @@ header {
 
 header h4 {
     text-align: center;
-}
-
-@font-face {
-    font-family: Grey;
-    src: url(/GreyQo-Regular.ttf);
 }
 
 /* Slideshow container */
