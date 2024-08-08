@@ -69,6 +69,8 @@ nav {
     position: fixed;
     top: 0;
     z-index: 5;
+    background: transparent;
+    transition: background-color 0.3s ease;
 }
 
 .topnav a {
@@ -168,7 +170,7 @@ header h4 {
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 1000px;
+    max-width: 1100px;
     position: relative;
     margin: auto;
 }
@@ -214,14 +216,6 @@ header h4 {
     bottom: 8px;
     width: 100%;
     text-align: center;
-}
-
-.numbertext {
-    color: #000000;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
 }
 
 .fade {

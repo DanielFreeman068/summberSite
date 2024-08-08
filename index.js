@@ -21,3 +21,12 @@ for (i = 0; i < slides.length; i++) {
 }
 slides[slideIndex-1].style.display = "block";
 }
+
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('.topnav');
+    if (window.scrollY > 900) { 
+        header.style.backgroundColor = 'rgba(0, 0, 0, 1)'; 
+    } else {
+        header.style.backgroundColor = 'transparent';
+    }
+});
