@@ -4,6 +4,11 @@
     src: url(/GreyQo-Regular.ttf);
 }
 
+@font-face {
+    font-family: Blue;
+    src: url(/Detourne.ttf);
+}
+
 html {
     margin:0;
     padding:0;
@@ -12,6 +17,7 @@ html {
 
 body {
     background-color: #333;
+    transition: background-color 0.9s ease;
 }
 
 * {
@@ -68,6 +74,7 @@ nav {
 
 .topnav-right {
     float: right;
+    margin-top: .8%;
 }
 
 .topnav {
@@ -91,20 +98,9 @@ nav {
     padding: 25px 16px;
     text-decoration: none;
     font-size: 20px;
+    margin-top: .8%;
+    margin-right: 2rem;
 }
-
-.topnav-right a:hover:nth-child(even) {
-    border: 3px solid white;
-    border-radius: 15px;
-    background-color: rgb(255, 115, 115);
-}
-
-.topnav a:hover:nth-child(odd) {
-    border: 3px solid white;
-    border-radius: 15px;
-    background-color: rgb(255, 154, 71);
-}
-
 
 //big summer welcomg styling
 #summerHeader {
@@ -168,4 +164,152 @@ header h4 {
     text-align: center;
 }
 
+//css for a tags in nav
+#button-24 {
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    margin-left: 2rem;
+}
+
+#button-24:hover,
+#button-24:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #FF4742;
+}
+
+#button-24:active {
+    opacity: .5;
+}
+
 /* Slideshow container */
+
+.slide-container{
+    left:50%;
+    margin-top:20rem;
+    transform: translate(-50%, -50%);
+    position:relative;
+    width:1000px;
+    height:550px;
+    border: 3px solid #ede6d6;
+    box-shadow: 20px 20px 8px 2px rgba(0,0,0,0.2);
+    background-color: #ede6d6;
+}
+.slide-container .slides{
+    width:100%;
+    height: calc(100% - 40px);
+    position: relative;
+    overflow: hidden;
+}
+.slide-container .slides img{
+    width:100%;
+    height:100%;
+    position: absolute;
+    object-fit: cover;
+}
+.slide-container .slides img:not(.active){
+    top: 0;
+    left:-100%;
+}
+span.next, span.prev{
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    padding:14px;
+    color:#eee;
+    font-size:24px;
+    font-weight: bold;
+    transition:0.5s;
+    border-radius: 3px;
+    user-select:none;
+    cursor:pointer;
+    z-index: 1;
+}
+span.next{
+    right:20px;
+}
+span.prev{
+    left: 20px;
+}
+span.next:hover, span.prev:hover{
+    background-color: #ede6d6;
+    opacity: .8;
+    color: #222;
+}
+@keyframes next1{
+    from{
+        left:0%;
+    }
+    to{
+        left:-100%;
+    }
+}
+@keyframes next2{
+    from{
+        left:100%;
+    }
+    to{
+        left:0%;
+    }
+}
+@keyframes prev1{
+    from{
+        left:0%;
+    }
+    to{
+        left:100%;
+    }
+}
+@keyframes prev2{
+    from{
+        left:-100%;
+    }
+    to{
+        left:0%;
+    }
+}
+
+//more polaroid and post it note in gallery and wording under gallery
+.post {
+    position: relative;
+    left: 110%;
+    top: -60%;
+    rotate: 15deg;
+}
+
+.daily {
+    position: relative;
+    top: -10%;
+    left: -70%;
+    rotate: -15deg;
+}
+
+.subheadingGallery {
+    color:#9ab658;
+    z-index: 100;
+    text-align: center;
+    position: relative;
+    bottom: 45%;
+    font-size: 100px;
+    font-family: Blue;
+}

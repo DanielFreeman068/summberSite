@@ -10,12 +10,10 @@
     <!-- nav bar -->
     <nav>
         <div class="topnav">
-            <a class="glow">Summer</a>
+            <a id="button-24" class="glow">Summer</a>
             <div class="topnav-right">
-                <a href="https://github.com/">About</a>
-                <a href="https://github.com/">Gallery</a>
-                <a href="https://github.com/">Events</a>
-                <a href="https://github.com/">Contacts</a>
+                <a id="button-24" role="button" href="#gallery">Gallery and Events</a>
+                <a id="button-24" role="button" href="#contact">Contact Us</a>
             </div>
         </div>
     </nav>
@@ -30,8 +28,24 @@
     <header>
         <h4>And just like that Summer is over in the blink of an eye | Here is a rewind over the fun memories and good times made</h4>
     </header>
-    
         <!-- slideshow of pictures -->
+        <div id="gallery" class="slide-container">
+            <div class="slides">
+                <img class="slideshowIMG" src="./images/pic1.jpg">
+                <img class="slideshowIMG" src="./images/pic3.jpg">
+                <img class="slideshowIMG" src="./images/pic8.jpg">
+                <img class="slideshowIMG" src="./images/pic9.jpg">
+                <img class="slideshowIMG" src="./images/pic10.jpg">
+            </div>
+            <div class="buttons">
+                <span class="next">&#10095;</span>
+                <span class="prev">&#10094;</span>
+            </div>
+            <img class="post" src="./images/post.png" alt="post it note">
+            <img class="daily" src="./images/dailydrip.png" alt="daily drip">
+            <h1 class="subheadingGallery">Summer was a blast!</h1>
+        </div>
+        <hr>
     <script src="./index.js"></script>
 </body>
 </html>
