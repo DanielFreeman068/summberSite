@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Daniel Freeman">
+    <meta name="description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+    <link rel="shortcut-icon" href="" type="image/x-icon">
     <title>My Summer | Home Page</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -25,17 +31,26 @@
     <img class="bg-image" id="van" src="./images/28118671461_6db20398b9_k.jpg" alt="van">
     <img id="summerHeader" src="./images/Hello-Summer-PNG-HD.png" alt="summer">
     <!-- start of next section of page with header -->
-    <header>
-        <h4>And just like that Summer is over in the blink of an eye | Here is a rewind over the fun memories and good times made</h4>
+    <header  id="gallery">
+        <h4>And just like that Summer is over in the blink of an eye. The goal of this website is to showcase how fun summer is with vibrant colors and good vibes so we can remember the moments shared with friends and family. Here is a rewind over the fun memories and good times made</h4>
     </header>
         <!-- slideshow of pictures -->
-        <div id="gallery" class="slide-container">
+        <div class="slide-container">
             <div class="slides">
-                <img class="slideshowIMG" src="./images/pic1.jpg">
-                <img class="slideshowIMG" src="./images/pic3.jpg">
-                <img class="slideshowIMG" src="./images/pic8.jpg">
-                <img class="slideshowIMG" src="./images/pic9.jpg">
-                <img class="slideshowIMG" src="./images/pic10.jpg">
+                <img id="one" class="slideshowIMG" src="./images/pic1.jpg">
+                <img id="two" class="slideshowIMG" src="./images/14547885035_380c650720_o.jpg">
+                <img id="three" class="slideshowIMG" src="./images/53270973549_2d310eb0fd_o.jpg">
+                <img id="four" class="slideshowIMG" src="./images/26436502394_ac22e0944a_o.jpg">
+                <img id="five" class="slideshowIMG" src="./images/pic3.jpg">
+                <img src="./images/6040288634_3ba47c5195_o.jpg" alt="peaches" id="six" class="slideshowIMG">
+            </div>
+            <div class="descrips">
+                <h1 class="info" id="uno">Silverback Mountain Colorado</h1>
+                <h1 class="info" id="dos">Lake Pleasant, Arizona</h1>
+                <h1 class="info" id="tres">Sand Dunes, Colorado</h1>
+                <h1 class="info" id="quatro">Flagstaff Camping, Arizona</h1>
+                <h1 class="info" id="cinco">Talking Stick Resort Amphitheatre, Cage the Elephant</h1>
+                <h1 class="info" id="seis">Apple Annie's Orchard, Arizona</h1>
             </div>
             <div class="buttons">
                 <span class="next">&#10095;</span>
@@ -43,9 +58,44 @@
             </div>
             <img class="post" src="./images/post.png" alt="post it note">
             <img class="daily" src="./images/dailydrip.png" alt="daily drip">
-            <h1 class="subheadingGallery">Summer was a blast!</h1>
+            <div class="css-typing">
+                <p class="subHead">Summer was a Blast!</p>
+            </div>
         </div>
         <hr>
+        <!-- contact us -->
+        <div id="contact" class="contactBox">
+            <div class="formBox">
+                <h2>Contact Us</h2>
+                <p>You will hear from us at the earliest!</p>
+                <form onsubmit="post();">
+                    <div class="nameInp">
+                        <i class="fa fa-user icon"></i>
+                        <input type="text" placeholder="Full Name" name="name" id="name" required>
+                    </div>
+                    <div class="mailInp">
+                        <i class="fa fa-envelope"></i>
+                        <input type="email" name="mail" id="mail" placeholder="Email" required>
+                    </div>
+                    <div class="phoneInp">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="number" name="phone" id="phone" placeholder="Phone" min="100000" max="9999999999" required>
+                    </div>
+                    <div class="queryInp">
+                        <textarea name="query" id="query" cols="30" rows="5"
+                            placeholder="Any comment or your query" required></textarea>
+                    </div>
+                    <div class="submitBtn">
+                        <button id="btn" onclick="notif()">Send</button>
+                    </div>
+                </form>
+                <p class="extra">You can also contact us at 181-1711-322</p>
+            </div>
+        </div>
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
     <script src="./index.js"></script>
 </body>
 </html>

@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background-color: #333;
+  background: url("/images/bullseye-gradient.svg");
   transition: background-color 0.9s ease;
 }
 
@@ -126,6 +126,7 @@ nav {
 }
 header {
   border-top: 5px solid rgb(0, 0, 0);
+  border-bottom: 5px solid rgb(0, 0, 0);
   position: relative;
   top: -5px;
   width: 101%;
@@ -136,7 +137,16 @@ header {
 }
 
 header h4 {
+  font-family: Blue;
   text-align: center;
+  position: relative;
+  font-size: 2em;
+  left: 50%;
+  margin-bottom: -1%;
+  width: 45%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  transform: translate(-50%);
 }
 
 #button-24 {
@@ -178,6 +188,15 @@ header h4 {
 }
 
 /* Slideshow container */
+.info {
+  display: none; /* Initially hidden */
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-family: Blue;
+  white-space: nowrap;
+}
+
 .slide-container {
   left: 50%;
   margin-top: 20rem;
@@ -287,12 +306,145 @@ span.next:hover, span.prev:hover {
   rotate: -15deg;
 }
 
-.subheadingGallery {
+.formBox {
+  padding: 15px;
+  text-align: center;
+  min-height: 50vh;
+  min-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  background: rgba(248, 248, 248, 0.5215686275);
+  border-radius: 30px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+h2 {
+  margin-bottom: -10px;
+  font-family: Blue;
+  font-size: 3em;
+}
+
+p {
+  font-weight: 500;
+  font-size: 2.1em;
+  font-family: Blue;
+}
+
+form {
+  padding: 10px;
+}
+
+form > div {
+  padding: 10px;
+  position: relative;
+  font-size: 1.3em;
+}
+
+form > div i {
+  position: absolute;
+  top: 22px;
+  margin-left: 10px;
+  opacity: 0.6;
+}
+
+form > div input {
+  height: 2em;
+  width: 70vw;
+  padding-left: 40px;
+  font-size: 1em;
+  border-radius: 20px;
+  outline: none;
+  border: 1px solid #b5adad;
+  background-color: #f1f1f1;
+}
+
+div > input:focus {
+  border: 1px solid #6f6a6a;
+}
+
+form > div:hover > i {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+textarea {
+  border: none;
+  width: 70vw;
+  border-radius: 20px;
+  padding: 10px;
+  outline: none;
+  font-size: 1em;
+}
+
+button {
+  width: 50%;
+  height: 5vh;
+  color: #ffffff;
+  background: #00d689;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-family: Blue;
+}
+
+button:hover {
+  background-color: #03f59c;
+}
+
+@media screen and (min-width: 900px) {
+  form > div input {
+    width: 50vw;
+  }
+  textarea {
+    width: 50vw;
+  }
+}
+.contactBox {
+  background-image: linear-gradient(40deg, hsl(240, 56%, 48%) 0%, hsl(250, 48%, 49%) 10%, hsl(260, 40%, 49%) 24%, hsl(271, 34%, 50%) 42%, hsl(285, 28%, 50%) 57%, hsl(305, 24%, 50%) 68%, hsl(325, 29%, 54%) 75%, hsl(340, 34%, 58%) 81%, hsl(354, 40%, 62%) 85%, hsl(358, 39%, 63%) 89%, hsl(353, 31%, 62%) 92%, hsl(345, 22%, 61%) 94%, hsl(330, 14%, 60%) 96%, hsl(284, 9%, 60%) 97%, hsl(232, 12%, 62%) 98%, hsl(212, 22%, 61%) 99%, hsl(204, 32%, 60%) 100%, hsl(200, 41%, 58%) 100%);
+  background-repeat: no-repeat;
+  height: 99vh;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.css-typing p {
+  display: none;
+  transform: translateX(-50%);
   color: #9ab658;
   z-index: 100;
   text-align: center;
-  position: relative;
-  bottom: 45%;
+  position: absolute;
+  top: 100%;
+  left: 50%;
   font-size: 100px;
   font-family: Blue;
+  font-weight: 100;
+  border-right: 0.15em solid orange;
+  font-size: 85px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 8.5em;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: 0.15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }/*# sourceMappingURL=style.css.map */
