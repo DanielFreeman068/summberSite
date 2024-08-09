@@ -1,17 +1,7 @@
 //font for page
 @font-face {
-    font-family: Grey;
-    src: url(/GreyQo-Regular.ttf);
-}
-
-@font-face {
-    font-family: Blue;
-    src: url(/Detourne.ttf);
-}
-
-@font-face {
-    font-family: fnt;
-    src: url(/Grey_Qo\,Poppins/);
+    font-family: Poppins;
+    src: url(/fonts/Poppins-Regular.ttf) format("truetype");
 }
 
 //page setup
@@ -23,12 +13,12 @@ html {
 }
 
 body {
-    background: url("/images/bullseye-gradient.svg");
+    background-color: #DFD0BB;
     transition: background-color 0.9s ease;
 }
 
 * {
-    font-family: fnt;
+    font-family: Poppins;
     box-sizing: border-box;
 }
 
@@ -130,7 +120,7 @@ nav {
     font-size: 40px;
     color: #ffffff;
     text-align: center;
-    font-family: fnt;
+    font-family: Poppins;
     animation: glow 1s ease-in-out infinite alternate;
 }
 
@@ -156,19 +146,17 @@ nav {
 
 //header styling for start of second part of page
 header {
-    border-top: 5px solid rgb(0, 0, 0);
-    border-bottom: 5px solid rgb(0, 0, 0);
     position: relative;
     top: -5px;
+    color: #943D2C;
     width: 101%;
     margin-left: -9px;
     border-radius: 5px;
     padding:10px;
-    background-image: url("/");
 }
 
 header h4 {
-    font-family: fnt;
+    font-family: Poppins;
     text-align: center;
     position: relative;
     font-size: 2em;
@@ -182,15 +170,15 @@ header h4 {
 
 //css for a tags in nav
 #button-24 {
-    background: #FF4742;
-    border: 1px solid #FF4742;
+    background: #943D2C;
+    border: 1px solid #943D2C;
     border-radius: 6px;
     box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
     box-sizing: border-box;
     color: #FFFFFF;
     cursor: pointer;
     display: inline-block;
-    font-family: fnt;
+    font-family: Poppins;
     font-size: 16px;
     font-weight: 800;
     line-height: 16px;
@@ -224,7 +212,7 @@ header h4 {
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
-    font-family: fnt;
+    font-family: Poppins;
     white-space: nowrap;
 }
 
@@ -342,13 +330,13 @@ span.next:hover, span.prev:hover{
 }
 h2 {
     margin-bottom: -10px;
-    font-family: fnt;
+    font-family: Poppins;
     font-size: 3em;
 }
 p {
     font-weight: 500;
     font-size: 2.1em;
-    font-family: fnt;
+    font-family: Poppins;
 }
 form {
     padding: 10px;
@@ -399,7 +387,7 @@ button {
     border-radius: 10px;
     cursor: pointer;
     font-size: 1.5em;
-    font-family: fnt;
+    font-family: Poppins;
 }
 
 button:hover {
@@ -476,20 +464,18 @@ margin-left: -1%;
 .css-typing p {
     display:none;
     transform: translateX(-50%);
-    color:#9ab658;
+    color:#943D2C;
     z-index: 100;
     text-align: center;
     position: absolute;
     top: 100%;
     left: 50%;
-    font-size: 100px;
-    font-family: fnt;
-    font-weight: 100;
+    font-family: Poppins;
     border-right: .15em solid orange;
-    font-size: 85px;
+    font-size: 55px;
     white-space: nowrap;
     overflow: hidden;
-    width: 8.5em;
+    width: 11em;
     // -webkit-animation: type 2s steps(40, end);
     // animation: type 2s steps(40, end);
     -webkit-animation-fill-mode: forwards;

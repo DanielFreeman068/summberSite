@@ -3,7 +3,7 @@ $(document).ready(function(){
     window.addEventListener('scroll', function() {
         const header = document.querySelector('.topnav');
         if (window.scrollY > 900) { 
-            header.style.backgroundColor = 'rgba(0, 0, 0, 1)'; 
+            header.style.backgroundColor = '#474344'; 
         } else {
             header.style.backgroundColor = 'transparent';
         }
