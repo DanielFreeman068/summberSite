@@ -427,7 +427,7 @@ button:hover {
     width: 50vw;
   }
 }
-@media only screen and (max-width: 1224px) {
+@media only screen and (min-width: 1224px) {
   .post {
     position: absolute;
     left: 105%;
@@ -442,7 +442,6 @@ button:hover {
   }
   .slide-container {
     left: 50%;
-    margin-top: 20rem;
     transform: translate(-50%, -50%);
     position: relative;
     width: 800px;
