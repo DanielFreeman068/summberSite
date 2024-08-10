@@ -1,5 +1,5 @@
 $(document).ready(function(){
-        //event listener for nav bar to change on scroll
+    //event listener for nav bar to change on scroll
     window.addEventListener('scroll', function() {
         const header = document.querySelector('.topnav');
         if (window.scrollY > 900) { 
@@ -11,7 +11,7 @@ $(document).ready(function(){
         //event listener for subheading to start on scroll
     window.addEventListener('scroll', function() {
         const sub = document.querySelector('.subHead');
-        if (window.scrollY > 1100) { 
+        if (window.scrollY > 800) { 
             sub.style.animation = 'type 2s steps(40, end)'; 
             sub.style.display = 'block';
         } else {
@@ -66,44 +66,80 @@ $(document).ready(function(){
     container.addEventListener("mouseout", autoSliding);
     //jquery for descriptions popping up under pictures
     $("#one").mouseenter(function(){
-        $("#uno").slideDown(1000); // Slide down when mouse enters
+        $("#uno").addClass('magic');
+        $("#dis").addClass('magic2');
     });
     $("#one").mouseleave(function(){
-        $("#uno").slideUp(1000); // Slide up when mouse leaves
+        $("#uno").removeClass('magic');
+        $("#dis").removeClass('magic2');
     });
     $("#two").mouseenter(function(){
-        $("#dos").slideDown(1000);
+        $("#dos").addClass('magic');
+        $("#dis").addClass('magic2');
     });
     $("#two").mouseleave(function(){
-        $("#dos").slideUp(1000);
+        $("#dos").removeClass('magic');
+        $("#dis").removeClass('magic2');
     });
     $("#three").mouseenter(function(){
-        $("#tres").slideDown(1000);
+        $("#tres").addClass('magic');
+        $("#dis").addClass('magic2');
     });
     $("#three").mouseleave(function(){
-        $("#tres").slideUp(1000);
+        $("#tres").removeClass('magic');
+        $("#dis").removeClass('magic2');
     });
     $("#four").mouseenter(function(){
-        $("#quatro").slideDown(1000);
+        $("#quatro").addClass('magic');
+        $("#dis").addClass('magic2');
     });
     $("#four").mouseleave(function(){
-        $("#quatro").slideUp(1000);
+        $("#quatro").removeClass('magic');
+        $("#dis").removeClass('magic2');
     });
     $("#five").mouseenter(function(){
-        $("#cinco").slideDown(1000);
+        $("#cinco").addClass('magic');
+        $("#dis").addClass('magic2');
     });
     $("#five").mouseleave(function(){
-        $("#cinco").slideUp(1000);
+        $("#cinco").removeClass('magic');
+        $("#dis").removeClass('magic2');
     });
     $("#six").mouseenter(function() {
-        $("#seis").slideDown(1000);
+        $("#seis").addClass('magic');
+        $("#dis").addClass('magic2');
     })
     $("#six").mouseleave(function(){
-        $("#seis").slideUp(1000);
+        $("#seis").removeClass('magic');
+        $("#dis").removeClass('magic2');
+    })
+    //jquery for book
+    $("#book").mouseenter(function(){
+        $("#bookOpen").slideDown(1000);
     })
 });
-
+//alerts when form is submitted
 let post = function() {
     alert('Your feedback has been recorded!');
     return false;
+}
+
+//function to toggle book from opening and closing
+function openBook() {
+    const book = document.querySelector('.bookContent');
+    if (book) {
+        // Toggle between 'none' and 'block'
+        if (book.style.display === 'block') {
+            book.style.display = 'none';
+        } else {
+            book.style.display = 'block';
+            const sub = document.querySelector('.sig');
+            if (book.style.display === 'block') { 
+                sub.style.animation = 'type 2s steps(40, end)'; 
+                sub.style.display = 'block';
+            } else {
+                sub.style.animationPlayState = 'paused';
+            }
+        }
+    }
 }

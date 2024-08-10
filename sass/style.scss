@@ -3,6 +3,10 @@
     font-family: Poppins;
     src: url(/fonts/Poppins-Regular.ttf) format("truetype");
 }
+@font-face {
+    font-family: curs;
+    src: url(/fonts/AlexBrush-Regular.ttf) format("truetype");
+}
 
 //page setup
 html {
@@ -29,6 +33,7 @@ body {
     width: 101%;
     margin-left: -10px;
     border-radius: 5px;
+    border-bottom: 4px solid #0f0f0f;
 }
 
 //polaroids and arrow placement on top of page
@@ -145,29 +150,12 @@ nav {
 }
 
 //header styling for start of second part of page
-header {
-    position: relative;
-    top: -5px;
-    color: #943D2C;
-    width: 101%;
-    margin-left: -9px;
-    border-radius: 5px;
-    padding:10px;
+.summerBack {
+    background-color: #FFEBD2;
+    border-radius: 50%;
+    width: 1000px;
+    border: 7px solid #FFA364;;
 }
-
-header h4 {
-    font-family: Poppins;
-    text-align: center;
-    position: relative;
-    font-size: 2em;
-    left: 50%;
-    margin-bottom: -1%;
-    width: 45%;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    transform: translate(-50%);
-}
-
 //css for a tags in nav
 #button-24 {
     background: #943D2C;
@@ -215,10 +203,18 @@ header h4 {
     font-family: Poppins;
     white-space: nowrap;
 }
+.display {
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-family: Poppins;
+    white-space: nowrap;
+}
 
 .slide-container{
+    margin-top: 13rem;
+    border-radius: 20px;
     left:50%;
-    margin-top:20rem;
     transform: translate(-50%, -50%);
     position:relative;
     width:1000px;
@@ -232,12 +228,14 @@ header h4 {
     height: calc(100% - 40px);
     position: relative;
     overflow: hidden;
+    border-radius: 20px 20px 0 0;
 }
 .slide-container .slides img{
     width:100%;
     height:100%;
     position: absolute;
     object-fit: cover;
+    border-radius: 20px 20px 0 0;
 }
 .slide-container .slides img:not(.active){
     top: 0;
@@ -311,9 +309,39 @@ span.next:hover, span.prev:hover{
 
 .daily {
     position: relative;
-    top: -10%;
+    top: 10%;
     left: -70%;
     rotate: -15deg;
+}
+
+.book {
+    right: 400px;
+    bottom: 3%;
+    cursor: pointer;
+    transition: 0.5s;
+    position: absolute;
+    left: 60%;
+    width:300px
+}
+
+.paper {
+    position: absolute;
+    left: 30%;
+    width: 200px;
+    rotate: -10deg;
+    bottom: 10%;
+}
+
+.book:hover {
+    rotate: 15deg;
+    transition: .5s;
+}
+
+.boulder {
+    position: absolute;
+    right: 4%;
+    rotate: 15deg;
+    height: 350px;
 }
 
 //contact section
@@ -381,7 +409,7 @@ button {
     width: 50%;
     height: 5vh;
     color: #ffffff;
-    background: #00d689;
+    background: #943D2C;
     outline: none;
     border: none;
     border-radius: 10px;
@@ -391,7 +419,7 @@ button {
 }
 
 button:hover {
-    background-color: #03f59c;
+    background-color: #FF4742;
 }
 
 //media for smaller screens
@@ -403,7 +431,7 @@ button:hover {
         width: 50vw;
     }
 }
-@media only screen and (min-width : 1224px) {
+@media only screen and (max-width : 1224px) {
     .post {
         position: absolute;
         left: 105%;
@@ -431,26 +459,6 @@ button:hover {
 }
 
 .contactBox {
-    background-image: linear-gradient(40deg,
-    hsl(240deg 56% 48%) 0%,
-    hsl(250deg 48% 49%) 10%,
-    hsl(260deg 40% 49%) 24%,
-    hsl(271deg 34% 50%) 42%,
-    hsl(285deg 28% 50%) 57%,
-    hsl(305deg 24% 50%) 68%,
-    hsl(325deg 29% 54%) 75%,
-    hsl(340deg 34% 58%) 81%,
-    hsl(354deg 40% 62%) 85%,
-    hsl(358deg 39% 63%) 89%,
-    hsl(353deg 31% 62%) 92%,
-    hsl(345deg 22% 61%) 94%,
-    hsl(330deg 14% 60%) 96%,
-    hsl(284deg 9% 60%) 97%,
-    hsl(232deg 12% 62%) 98%,
-    hsl(212deg 22% 61%) 99%,
-    hsl(204deg 32% 60%) 100%,
-    hsl(200deg 41% 58%) 100%);
-background-repeat: no-repeat;
 height: 100vh;
 width: 100vw;
 overflow-y: hidden;
@@ -468,7 +476,7 @@ margin-left: -1%;
     z-index: 100;
     text-align: center;
     position: absolute;
-    top: 100%;
+    top: 120%;
     left: 50%;
     font-family: Poppins;
     border-right: .15em solid orange;
@@ -476,8 +484,20 @@ margin-left: -1%;
     white-space: nowrap;
     overflow: hidden;
     width: 11em;
-    // -webkit-animation: type 2s steps(40, end);
-    // animation: type 2s steps(40, end);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+.typing p {
+    // display:none;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: curs;
+    border-right: .15em solid orange;
+    font-size: 35px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 6.5em;
+    margin-left: 11rem;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
@@ -512,4 +532,44 @@ margin-left: -1%;
     50% {
         border-color: tranparent;
     }
+}
+
+//classes to make description be gone and come back
+.magic {
+    display:block;
+}
+.magic2 {
+    display:none;
+}
+
+//book styling
+.bookContent {
+    display: none;
+}
+
+.bookContent  .bookWords{
+    z-index: 11;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 40%;
+    top: 50%;
+    text-align: center;
+}
+
+.bookContent  .wordRight{
+    z-index: 11;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    right: 21%;
+    top: 50%;
+    text-align: center;
+}
+
+.openBook {
+width: 1000px;
+position: absolute;
+transform: translate(-50%, -50%);
+left: 50%;
+top: 50%;
+z-index: 10;
 }

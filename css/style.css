@@ -2,6 +2,10 @@
   font-family: Poppins;
   src: url(/fonts/Poppins-Regular.ttf) format("truetype");
 }
+@font-face {
+  font-family: curs;
+  src: url(/fonts/AlexBrush-Regular.ttf) format("truetype");
+}
 html {
   margin: 0;
   padding: 0;
@@ -25,6 +29,7 @@ body {
   width: 101%;
   margin-left: -10px;
   border-radius: 5px;
+  border-bottom: 4px solid #0f0f0f;
 }
 
 .polar {
@@ -121,27 +126,11 @@ nav {
     text-shadow: 0 0 20px #fff, 0 0 30px #fff04d, 0 0 40px #fff04d, 0 0 50px #fff04d, 0 0 60px #fff04d, 0 0 70px #fff04d, 0 0 80px #fff04d;
   }
 }
-header {
-  position: relative;
-  top: -5px;
-  color: #943D2C;
-  width: 101%;
-  margin-left: -9px;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-header h4 {
-  font-family: Poppins;
-  text-align: center;
-  position: relative;
-  font-size: 2em;
-  left: 50%;
-  margin-bottom: -1%;
-  width: 45%;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  transform: translate(-50%);
+.summerBack {
+  background-color: #FFEBD2;
+  border-radius: 50%;
+  width: 1000px;
+  border: 7px solid #FFA364;
 }
 
 #button-24 {
@@ -192,9 +181,18 @@ header h4 {
   white-space: nowrap;
 }
 
-.slide-container {
+.display {
   left: 50%;
-  margin-top: 20rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-family: Poppins;
+  white-space: nowrap;
+}
+
+.slide-container {
+  margin-top: 13rem;
+  border-radius: 20px;
+  left: 50%;
   transform: translate(-50%, -50%);
   position: relative;
   width: 1000px;
@@ -209,6 +207,7 @@ header h4 {
   height: calc(100% - 40px);
   position: relative;
   overflow: hidden;
+  border-radius: 20px 20px 0 0;
 }
 
 .slide-container .slides img {
@@ -217,6 +216,7 @@ header h4 {
   position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 20px 20px 0 0;
 }
 
 .slide-container .slides img:not(.active) {
@@ -296,9 +296,39 @@ span.next:hover, span.prev:hover {
 
 .daily {
   position: relative;
-  top: -10%;
+  top: 10%;
   left: -70%;
   rotate: -15deg;
+}
+
+.book {
+  right: 400px;
+  bottom: 3%;
+  cursor: pointer;
+  transition: 0.5s;
+  position: absolute;
+  left: 60%;
+  width: 300px;
+}
+
+.paper {
+  position: absolute;
+  left: 30%;
+  width: 200px;
+  rotate: -10deg;
+  bottom: 10%;
+}
+
+.book:hover {
+  rotate: 15deg;
+  transition: 0.5s;
+}
+
+.boulder {
+  position: absolute;
+  right: 4%;
+  rotate: 15deg;
+  height: 350px;
 }
 
 .formBox {
@@ -376,7 +406,7 @@ button {
   width: 50%;
   height: 5vh;
   color: #ffffff;
-  background: #00d689;
+  background: #943D2C;
   outline: none;
   border: none;
   border-radius: 10px;
@@ -386,7 +416,7 @@ button {
 }
 
 button:hover {
-  background-color: #03f59c;
+  background-color: #FF4742;
 }
 
 @media screen and (min-width: 900px) {
@@ -397,7 +427,7 @@ button:hover {
     width: 50vw;
   }
 }
-@media only screen and (min-width: 1224px) {
+@media only screen and (max-width: 1224px) {
   .post {
     position: absolute;
     left: 105%;
@@ -423,8 +453,6 @@ button:hover {
   }
 }
 .contactBox {
-  background-image: linear-gradient(40deg, hsl(240, 56%, 48%) 0%, hsl(250, 48%, 49%) 10%, hsl(260, 40%, 49%) 24%, hsl(271, 34%, 50%) 42%, hsl(285, 28%, 50%) 57%, hsl(305, 24%, 50%) 68%, hsl(325, 29%, 54%) 75%, hsl(340, 34%, 58%) 81%, hsl(354, 40%, 62%) 85%, hsl(358, 39%, 63%) 89%, hsl(353, 31%, 62%) 92%, hsl(345, 22%, 61%) 94%, hsl(330, 14%, 60%) 96%, hsl(284, 9%, 60%) 97%, hsl(232, 12%, 62%) 98%, hsl(212, 22%, 61%) 99%, hsl(204, 32%, 60%) 100%, hsl(200, 41%, 58%) 100%);
-  background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
   overflow-y: hidden;
@@ -441,7 +469,7 @@ button:hover {
   z-index: 100;
   text-align: center;
   position: absolute;
-  top: 100%;
+  top: 120%;
   left: 50%;
   font-family: Poppins;
   border-right: 0.15em solid orange;
@@ -449,6 +477,19 @@ button:hover {
   white-space: nowrap;
   overflow: hidden;
   width: 11em;
+  animation-fill-mode: forwards;
+}
+
+.typing p {
+  transform: translateX(-50%);
+  text-align: center;
+  font-family: curs;
+  border-right: 0.15em solid orange;
+  font-size: 35px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 6.5em;
+  margin-left: 11rem;
   animation-fill-mode: forwards;
 }
 
@@ -467,4 +508,42 @@ button:hover {
   50% {
     border-color: transparent;
   }
+}
+.magic {
+  display: block;
+}
+
+.magic2 {
+  display: none;
+}
+
+.bookContent {
+  display: none;
+}
+
+.bookContent .bookWords {
+  z-index: 11;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 40%;
+  top: 50%;
+  text-align: center;
+}
+
+.bookContent .wordRight {
+  z-index: 11;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  right: 21%;
+  top: 50%;
+  text-align: center;
+}
+
+.openBook {
+  width: 1000px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  z-index: 10;
 }/*# sourceMappingURL=style.css.map */
