@@ -307,7 +307,7 @@ span.next:hover, span.prev:hover {
   cursor: pointer;
   transition: 0.5s;
   position: absolute;
-  left: 60%;
+  left: 70%;
   width: 300px;
 }
 
@@ -569,7 +569,7 @@ button:hover {
     cursor: pointer;
     transition: 0.5s;
     position: absolute;
-    left: 60%;
+    left: 70%;
     width: 300px;
   }
   .css-typing p {
